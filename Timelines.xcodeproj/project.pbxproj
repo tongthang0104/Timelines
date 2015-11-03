@@ -8,12 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		DE923C7D1BE95742002453AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE923C7C1BE95742002453AA /* AppDelegate.swift */; };
-		DE923C7F1BE95742002453AA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE923C7E1BE95742002453AA /* ViewController.swift */; };
+		DE923C7F1BE95742002453AA /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE923C7E1BE95742002453AA /* ProfileViewController.swift */; };
 		DE923C821BE95742002453AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE923C801BE95742002453AA /* Main.storyboard */; };
 		DE923C841BE95742002453AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE923C831BE95742002453AA /* Assets.xcassets */; };
 		DE923C871BE95742002453AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE923C851BE95742002453AA /* LaunchScreen.storyboard */; };
 		DE923C921BE95742002453AA /* TimelinesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE923C911BE95742002453AA /* TimelinesTests.swift */; };
 		DE923C9D1BE95742002453AA /* TimelinesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE923C9C1BE95742002453AA /* TimelinesUITests.swift */; };
+		DE923CAB1BE96432002453AA /* TimelineTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE923CAA1BE96432002453AA /* TimelineTableViewController.swift */; };
+		DE923CAD1BE96492002453AA /* PostDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE923CAC1BE96492002453AA /* PostDetailTableViewController.swift */; };
+		DE923CAF1BE964CD002453AA /* UserSearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE923CAE1BE964CD002453AA /* UserSearchTableViewController.swift */; };
+		DE923CB11BE969F6002453AA /* AddPhotoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE923CB01BE969F6002453AA /* AddPhotoTableViewController.swift */; };
+		DE923CB31BE96C39002453AA /* LogInSignUpPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE923CB21BE96C39002453AA /* LogInSignUpPickerViewController.swift */; };
+		DE923CB51BE96D2B002453AA /* LoginSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE923CB41BE96D2B002453AA /* LoginSignUpViewController.swift */; };
+		DE923CBA1BE96E0B002453AA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE923CB91BE96E0B002453AA /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +43,7 @@
 /* Begin PBXFileReference section */
 		DE923C791BE95742002453AA /* Timelines.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Timelines.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE923C7C1BE95742002453AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DE923C7E1BE95742002453AA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DE923C7E1BE95742002453AA /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		DE923C811BE95742002453AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DE923C831BE95742002453AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DE923C861BE95742002453AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +54,13 @@
 		DE923C981BE95742002453AA /* TimelinesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimelinesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE923C9C1BE95742002453AA /* TimelinesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelinesUITests.swift; sourceTree = "<group>"; };
 		DE923C9E1BE95742002453AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE923CAA1BE96432002453AA /* TimelineTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineTableViewController.swift; sourceTree = "<group>"; };
+		DE923CAC1BE96492002453AA /* PostDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostDetailTableViewController.swift; sourceTree = "<group>"; };
+		DE923CAE1BE964CD002453AA /* UserSearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSearchTableViewController.swift; sourceTree = "<group>"; };
+		DE923CB01BE969F6002453AA /* AddPhotoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPhotoTableViewController.swift; sourceTree = "<group>"; };
+		DE923CB21BE96C39002453AA /* LogInSignUpPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInSignUpPickerViewController.swift; sourceTree = "<group>"; };
+		DE923CB41BE96D2B002453AA /* LoginSignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginSignUpViewController.swift; sourceTree = "<group>"; };
+		DE923CB91BE96E0B002453AA /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = ../User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,11 +111,11 @@
 		DE923C7B1BE95742002453AA /* Timelines */ = {
 			isa = PBXGroup;
 			children = (
+				DE923CB71BE96D8A002453AA /* Model */,
+				DE923CB81BE96D90002453AA /* View */,
+				DE923CB61BE96D78002453AA /* Controller */,
 				DE923C7C1BE95742002453AA /* AppDelegate.swift */,
-				DE923C7E1BE95742002453AA /* ViewController.swift */,
-				DE923C801BE95742002453AA /* Main.storyboard */,
 				DE923C831BE95742002453AA /* Assets.xcassets */,
-				DE923C851BE95742002453AA /* LaunchScreen.storyboard */,
 				DE923C881BE95742002453AA /* Info.plist */,
 			);
 			path = Timelines;
@@ -123,6 +137,37 @@
 				DE923C9E1BE95742002453AA /* Info.plist */,
 			);
 			path = TimelinesUITests;
+			sourceTree = "<group>";
+		};
+		DE923CB61BE96D78002453AA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DE923CB41BE96D2B002453AA /* LoginSignUpViewController.swift */,
+				DE923CB21BE96C39002453AA /* LogInSignUpPickerViewController.swift */,
+				DE923CB01BE969F6002453AA /* AddPhotoTableViewController.swift */,
+				DE923CAE1BE964CD002453AA /* UserSearchTableViewController.swift */,
+				DE923CAC1BE96492002453AA /* PostDetailTableViewController.swift */,
+				DE923CAA1BE96432002453AA /* TimelineTableViewController.swift */,
+				DE923C7E1BE95742002453AA /* ProfileViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		DE923CB71BE96D8A002453AA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DE923CB91BE96E0B002453AA /* User.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		DE923CB81BE96D90002453AA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DE923C801BE95742002453AA /* Main.storyboard */,
+				DE923C851BE95742002453AA /* LaunchScreen.storyboard */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,7 +301,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE923C7F1BE95742002453AA /* ViewController.swift in Sources */,
+				DE923CB51BE96D2B002453AA /* LoginSignUpViewController.swift in Sources */,
+				DE923CB11BE969F6002453AA /* AddPhotoTableViewController.swift in Sources */,
+				DE923CB31BE96C39002453AA /* LogInSignUpPickerViewController.swift in Sources */,
+				DE923CAF1BE964CD002453AA /* UserSearchTableViewController.swift in Sources */,
+				DE923C7F1BE95742002453AA /* ProfileViewController.swift in Sources */,
+				DE923CBA1BE96E0B002453AA /* User.swift in Sources */,
+				DE923CAB1BE96432002453AA /* TimelineTableViewController.swift in Sources */,
+				DE923CAD1BE96492002453AA /* PostDetailTableViewController.swift in Sources */,
 				DE923C7D1BE95742002453AA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -482,6 +534,7 @@
 				DE923CA31BE95742002453AA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DE923CA41BE95742002453AA /* Build configuration list for PBXNativeTarget "TimelinesTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +543,7 @@
 				DE923CA61BE95742002453AA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DE923CA71BE95742002453AA /* Build configuration list for PBXNativeTarget "TimelinesUITests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +552,7 @@
 				DE923CA91BE95742002453AA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
