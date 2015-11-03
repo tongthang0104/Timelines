@@ -23,6 +23,7 @@
 		DE923CBA1BE96E0B002453AA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE923CB91BE96E0B002453AA /* User.swift */; };
 		DE923CBC1BE97573002453AA /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE923CBB1BE97573002453AA /* Post.swift */; };
 		DE923CBE1BE977E5002453AA /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE923CBD1BE977E5002453AA /* Comment.swift */; };
+		DE923CC01BE978D8002453AA /* Like.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE923CBF1BE978D8002453AA /* Like.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		DE923CB91BE96E0B002453AA /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = ../User.swift; sourceTree = "<group>"; };
 		DE923CBB1BE97573002453AA /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Post.swift; path = ../Post.swift; sourceTree = "<group>"; };
 		DE923CBD1BE977E5002453AA /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		DE923CBF1BE978D8002453AA /* Like.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Like.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +164,7 @@
 			children = (
 				DE923CBB1BE97573002453AA /* Post.swift */,
 				DE923CBD1BE977E5002453AA /* Comment.swift */,
+				DE923CBF1BE978D8002453AA /* Like.swift */,
 				DE923CB91BE96E0B002453AA /* User.swift */,
 			);
 			name = Model;
@@ -313,6 +316,7 @@
 				DE923CAF1BE964CD002453AA /* UserSearchTableViewController.swift in Sources */,
 				DE923C7F1BE95742002453AA /* ProfileViewController.swift in Sources */,
 				DE923CBA1BE96E0B002453AA /* User.swift in Sources */,
+				DE923CC01BE978D8002453AA /* Like.swift in Sources */,
 				DE923CAB1BE96432002453AA /* TimelineTableViewController.swift in Sources */,
 				DE923CAD1BE96492002453AA /* PostDetailTableViewController.swift in Sources */,
 				DE923C7D1BE95742002453AA /* AppDelegate.swift in Sources */,
