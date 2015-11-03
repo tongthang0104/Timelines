@@ -22,6 +22,7 @@
 		DE923CB51BE96D2B002453AA /* LoginSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE923CB41BE96D2B002453AA /* LoginSignUpViewController.swift */; };
 		DE923CBA1BE96E0B002453AA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE923CB91BE96E0B002453AA /* User.swift */; };
 		DE923CBC1BE97573002453AA /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE923CBB1BE97573002453AA /* Post.swift */; };
+		DE923CBE1BE977E5002453AA /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE923CBD1BE977E5002453AA /* Comment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		DE923CB41BE96D2B002453AA /* LoginSignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginSignUpViewController.swift; sourceTree = "<group>"; };
 		DE923CB91BE96E0B002453AA /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = ../User.swift; sourceTree = "<group>"; };
 		DE923CBB1BE97573002453AA /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Post.swift; path = ../Post.swift; sourceTree = "<group>"; };
+		DE923CBD1BE977E5002453AA /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				DE923CBB1BE97573002453AA /* Post.swift */,
+				DE923CBD1BE977E5002453AA /* Comment.swift */,
 				DE923CB91BE96E0B002453AA /* User.swift */,
 			);
 			name = Model;
@@ -313,6 +316,7 @@
 				DE923CAB1BE96432002453AA /* TimelineTableViewController.swift in Sources */,
 				DE923CAD1BE96492002453AA /* PostDetailTableViewController.swift in Sources */,
 				DE923C7D1BE95742002453AA /* AppDelegate.swift in Sources */,
+				DE923CBE1BE977E5002453AA /* Comment.swift in Sources */,
 				DE923CBC1BE97573002453AA /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
