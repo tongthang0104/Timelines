@@ -12,7 +12,7 @@ class UserController {
     
     static let shareController = UserController()
     
-    var currentUser: User! = UserController.mockUser().first
+    var currentUser: User! = nil
     
     //Check user Identifier
     static func userForIdentifier(identifier: String, completion: (user: User?) -> Void) {
@@ -48,7 +48,7 @@ class UserController {
     }
     
     //Create new User
-    static func createUser(email: String, password: String, bio: String?, url: String, completion: (success: Bool, user: User?) -> Void) {
+    static func createUser(email: String, password: String, bio: String?, url: String?, completion: (success: Bool, user: User?) -> Void) {
         completion(success: true, user: mockUser().first)
     }
     
