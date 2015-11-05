@@ -12,7 +12,7 @@ import UIKit
 class PostController {
     
     
-    static func fetchTimeLineForUser(user: User, completion: (post: [Post]) -> Void) {
+    static func fetchTimeLineForUser(user: User, completion: (post: [Post]?) -> Void) {
         completion(post: mockPost())
         
     }
