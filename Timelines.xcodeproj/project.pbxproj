@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DE544E921BEACB5900C803DB /* PostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE544E911BEACB5900C803DB /* PostController.swift */; };
+		DE544E941BEAD53800C803DB /* ImageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE544E931BEAD53800C803DB /* ImageController.swift */; };
 		DE923C7D1BE95742002453AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE923C7C1BE95742002453AA /* AppDelegate.swift */; };
 		DE923C7F1BE95742002453AA /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE923C7E1BE95742002453AA /* ProfileViewController.swift */; };
 		DE923C821BE95742002453AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE923C801BE95742002453AA /* Main.storyboard */; };
@@ -24,6 +26,7 @@
 		DE923CBC1BE97573002453AA /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE923CBB1BE97573002453AA /* Post.swift */; };
 		DE923CBE1BE977E5002453AA /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE923CBD1BE977E5002453AA /* Comment.swift */; };
 		DE923CC01BE978D8002453AA /* Like.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE923CBF1BE978D8002453AA /* Like.swift */; };
+		DE923CC21BE97E21002453AA /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE923CC11BE97E21002453AA /* UserController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DE544E911BEACB5900C803DB /* PostController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostController.swift; sourceTree = "<group>"; };
+		DE544E931BEAD53800C803DB /* ImageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageController.swift; sourceTree = "<group>"; };
 		DE923C791BE95742002453AA /* Timelines.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Timelines.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE923C7C1BE95742002453AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DE923C7E1BE95742002453AA /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -67,6 +72,7 @@
 		DE923CBB1BE97573002453AA /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Post.swift; path = ../Post.swift; sourceTree = "<group>"; };
 		DE923CBD1BE977E5002453AA /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		DE923CBF1BE978D8002453AA /* Like.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Like.swift; sourceTree = "<group>"; };
+		DE923CC11BE97E21002453AA /* UserController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,8 +126,6 @@
 				DE923CB71BE96D8A002453AA /* Model */,
 				DE923CB81BE96D90002453AA /* View */,
 				DE923CB61BE96D78002453AA /* Controller */,
-				DE923C7C1BE95742002453AA /* AppDelegate.swift */,
-				DE923C831BE95742002453AA /* Assets.xcassets */,
 				DE923C881BE95742002453AA /* Info.plist */,
 			);
 			path = Timelines;
@@ -155,6 +159,7 @@
 				DE923CAC1BE96492002453AA /* PostDetailTableViewController.swift */,
 				DE923CAA1BE96432002453AA /* TimelineTableViewController.swift */,
 				DE923C7E1BE95742002453AA /* ProfileViewController.swift */,
+				DE923C7C1BE95742002453AA /* AppDelegate.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -166,6 +171,10 @@
 				DE923CBD1BE977E5002453AA /* Comment.swift */,
 				DE923CBF1BE978D8002453AA /* Like.swift */,
 				DE923CB91BE96E0B002453AA /* User.swift */,
+				DE923CC11BE97E21002453AA /* UserController.swift */,
+				DE544E911BEACB5900C803DB /* PostController.swift */,
+				DE544E931BEAD53800C803DB /* ImageController.swift */,
+				DE923C831BE95742002453AA /* Assets.xcassets */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -315,11 +324,14 @@
 				DE923CB31BE96C39002453AA /* LogInSignUpPickerViewController.swift in Sources */,
 				DE923CAF1BE964CD002453AA /* UserSearchTableViewController.swift in Sources */,
 				DE923C7F1BE95742002453AA /* ProfileViewController.swift in Sources */,
+				DE544E941BEAD53800C803DB /* ImageController.swift in Sources */,
+				DE923CC21BE97E21002453AA /* UserController.swift in Sources */,
 				DE923CBA1BE96E0B002453AA /* User.swift in Sources */,
 				DE923CC01BE978D8002453AA /* Like.swift in Sources */,
 				DE923CAB1BE96432002453AA /* TimelineTableViewController.swift in Sources */,
 				DE923CAD1BE96492002453AA /* PostDetailTableViewController.swift in Sources */,
 				DE923C7D1BE95742002453AA /* AppDelegate.swift in Sources */,
+				DE544E921BEACB5900C803DB /* PostController.swift in Sources */,
 				DE923CBE1BE977E5002453AA /* Comment.swift in Sources */,
 				DE923CBC1BE97573002453AA /* Post.swift in Sources */,
 			);
