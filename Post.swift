@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 struct Post: Equatable {
     
@@ -14,11 +15,11 @@ struct Post: Equatable {
     var imageEndPoint: String
     var caption: String?
     var username: String
-    var comments: [String]
-    var likes: [String]
+    var comments: [Comment]
+    var likes: [Like]
     var identifier: String?
     
-    init(imageEndPoint: String, caption: String? = nil, username: String, comments: [String] = [], likes: [String] = [], identifier: String) {
+    init(imageEndPoint: String, caption: String? = nil, username: String = "", comments: [Comment] = [], likes: [Like] = [], identifier: String) {
         
         self.imageEndPoint = imageEndPoint
         self.caption = caption
