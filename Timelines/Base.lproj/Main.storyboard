@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="c8C-cN-9fY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="d6q-cL-eQd">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
@@ -21,7 +21,7 @@
                         <segue destination="Rj7-fi-G2X" kind="relationship" relationship="viewControllers" id="zcD-ZG-1Jg"/>
                         <segue destination="OWs-yu-lm4" kind="relationship" relationship="viewControllers" id="M9W-XU-cIE"/>
                         <segue destination="Ye7-r9-GbJ" kind="relationship" relationship="viewControllers" id="ACN-qq-q0j"/>
-                        <segue destination="nfa-NF-2rC" kind="presentation" id="oBN-pM-ecq"/>
+                        <segue destination="nfa-NF-2rC" kind="presentation" identifier="noCurrentUserSegue" id="oBN-pM-ecq"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4fC-2J-5sk" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -141,6 +141,9 @@
                             </segments>
                         </segmentedControl>
                     </navigationItem>
+                    <connections>
+                        <outlet property="modeSegmentControl" destination="ace-uw-aNK" id="HZs-kf-Tcd"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eDE-jp-syT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -314,23 +317,104 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="d4k-KI-NJp">
-                                <rect key="frame" x="20" y="108" width="560" height="237"/>
+                                <rect key="frame" x="20" y="108" width="560" height="265"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fRs-Da-YPJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="560" height="33"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="33" id="mId-pn-Ce6"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Oem-RG-Pxa">
+                                        <rect key="frame" x="0.0" y="33" width="560" height="33"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="33" id="HNx-P0-YeV"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mKj-lD-jAN">
+                                        <rect key="frame" x="0.0" y="66" width="560" height="33"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="33" id="Tg3-7g-1z0"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Bio" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cvz-1H-6qS">
+                                        <rect key="frame" x="0.0" y="99" width="560" height="33"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Website Url" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MKM-lG-LGx">
+                                        <rect key="frame" x="0.0" y="132" width="560" height="33"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GEN-0P-FcJ">
+                                        <rect key="frame" x="0.0" y="165" width="560" height="100"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="yby-k3-6gV"/>
+                                        </constraints>
+                                        <state key="normal" title="Action"/>
+                                        <connections>
+                                            <action selector="actionButtonTapped:" destination="4fI-OO-FG9" eventType="touchUpInside" id="ChP-eS-lQa"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <animations/>
+                                <constraints>
+                                    <constraint firstItem="MKM-lG-LGx" firstAttribute="height" secondItem="Cvz-1H-6qS" secondAttribute="height" id="ITY-fm-dLY"/>
+                                    <constraint firstItem="mKj-lD-jAN" firstAttribute="height" secondItem="Oem-RG-Pxa" secondAttribute="height" id="JMp-NC-YHT"/>
+                                    <constraint firstItem="Cvz-1H-6qS" firstAttribute="height" secondItem="fRs-Da-YPJ" secondAttribute="height" id="Mwx-Ej-Gdk"/>
+                                    <constraint firstItem="Cvz-1H-6qS" firstAttribute="height" secondItem="Oem-RG-Pxa" secondAttribute="height" id="RBY-YF-yrA"/>
+                                    <constraint firstItem="Cvz-1H-6qS" firstAttribute="height" secondItem="mKj-lD-jAN" secondAttribute="height" id="aHF-Ha-iAi"/>
+                                    <constraint firstItem="mKj-lD-jAN" firstAttribute="height" secondItem="fRs-Da-YPJ" secondAttribute="height" id="bHg-HF-Bv0"/>
+                                    <constraint firstItem="MKM-lG-LGx" firstAttribute="height" secondItem="fRs-Da-YPJ" secondAttribute="height" id="h6e-IC-Igz"/>
+                                    <constraint firstItem="MKM-lG-LGx" firstAttribute="height" secondItem="Oem-RG-Pxa" secondAttribute="height" id="vpc-mG-vsr"/>
+                                    <constraint firstItem="Oem-RG-Pxa" firstAttribute="height" secondItem="fRs-Da-YPJ" secondAttribute="height" id="xf2-yO-qWA"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="xf2-yO-qWA"/>
+                                        <exclude reference="JMp-NC-YHT"/>
+                                        <exclude reference="Mwx-Ej-Gdk"/>
+                                        <exclude reference="aHF-Ha-iAi"/>
+                                        <exclude reference="ITY-fm-dLY"/>
+                                        <exclude reference="h6e-IC-Igz"/>
+                                    </mask>
+                                </variation>
                             </stackView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="YH8-h6-xXl" firstAttribute="top" secondItem="d4k-KI-NJp" secondAttribute="bottom" priority="750" constant="255" id="0Qm-Tf-dJR"/>
+                            <constraint firstItem="YH8-h6-xXl" firstAttribute="top" secondItem="d4k-KI-NJp" secondAttribute="bottom" priority="750" constant="227" id="0Qm-Tf-dJR"/>
                             <constraint firstItem="d4k-KI-NJp" firstAttribute="top" secondItem="KmG-4V-EaH" secondAttribute="bottom" constant="44" id="Pkg-s1-W4B"/>
                             <constraint firstAttribute="trailingMargin" secondItem="d4k-KI-NJp" secondAttribute="trailing" id="TFx-me-H6T"/>
                             <constraint firstItem="d4k-KI-NJp" firstAttribute="leading" secondItem="cha-Ny-GL4" secondAttribute="leadingMargin" id="hOO-Ul-uW7"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="actionButton" destination="GEN-0P-FcJ" id="fUA-Xc-hw6"/>
+                        <outlet property="bioTextField" destination="Cvz-1H-6qS" id="4lG-RF-Pz8"/>
+                        <outlet property="emailTextField" destination="Oem-RG-Pxa" id="D6M-WC-wGt"/>
+                        <outlet property="passwordTextField" destination="mKj-lD-jAN" id="b33-1A-0Zq"/>
+                        <outlet property="urlTextField" destination="MKM-lG-LGx" id="nyf-sY-o5D"/>
+                        <outlet property="usernameTextField" destination="fRs-Da-YPJ" id="m6J-ly-d4x"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D2U-62-f8x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3658" y="-1667"/>
+            <point key="canvasLocation" x="-3630" y="-1667"/>
         </scene>
         <!--Log In Sign Up Picker View Controller-->
         <scene sceneID="Jpi-uf-eqy">
@@ -373,7 +457,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <state key="normal" title="Sign Up"/>
                                                 <connections>
-                                                    <segue destination="4fI-OO-FG9" kind="show" id="gHG-HE-pe6"/>
+                                                    <segue destination="4fI-OO-FG9" kind="show" identifier="signUpSegue" id="gHG-HE-pe6"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l5h-yg-Obt">
@@ -382,7 +466,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <state key="normal" title="Login"/>
                                                 <connections>
-                                                    <segue destination="4fI-OO-FG9" kind="show" id="crI-KM-063"/>
+                                                    <segue destination="4fI-OO-FG9" kind="show" identifier="loginSegue" id="crI-KM-063"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -411,7 +495,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a9n-eg-oWf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4314" y="-1667"/>
+            <point key="canvasLocation" x="-4302" y="-1667"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ESn-u1-5qJ">
