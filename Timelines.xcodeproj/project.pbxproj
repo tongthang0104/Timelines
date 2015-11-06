@@ -27,6 +27,7 @@
 		DE923CBE1BE977E5002453AA /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE923CBD1BE977E5002453AA /* Comment.swift */; };
 		DE923CC01BE978D8002453AA /* Like.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE923CBF1BE978D8002453AA /* Like.swift */; };
 		DE923CC21BE97E21002453AA /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE923CC11BE97E21002453AA /* UserController.swift */; };
+		DECCA7F51BEC81160000D39A /* UserSearchResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECCA7F41BEC81160000D39A /* UserSearchResultsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		DE923CBD1BE977E5002453AA /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		DE923CBF1BE978D8002453AA /* Like.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Like.swift; sourceTree = "<group>"; };
 		DE923CC11BE97E21002453AA /* UserController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
+		DECCA7F41BEC81160000D39A /* UserSearchResultsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSearchResultsTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +158,7 @@
 				DE923CB21BE96C39002453AA /* LogInSignUpPickerViewController.swift */,
 				DE923CB01BE969F6002453AA /* AddPhotoTableViewController.swift */,
 				DE923CAE1BE964CD002453AA /* UserSearchTableViewController.swift */,
+				DECCA7F41BEC81160000D39A /* UserSearchResultsTableViewController.swift */,
 				DE923CAC1BE96492002453AA /* PostDetailTableViewController.swift */,
 				DE923CAA1BE96432002453AA /* TimelineTableViewController.swift */,
 				DE923C7E1BE95742002453AA /* ProfileViewController.swift */,
@@ -322,6 +325,7 @@
 				DE923CB51BE96D2B002453AA /* LoginSignUpViewController.swift in Sources */,
 				DE923CB11BE969F6002453AA /* AddPhotoTableViewController.swift in Sources */,
 				DE923CB31BE96C39002453AA /* LogInSignUpPickerViewController.swift in Sources */,
+				DECCA7F51BEC81160000D39A /* UserSearchResultsTableViewController.swift in Sources */,
 				DE923CAF1BE964CD002453AA /* UserSearchTableViewController.swift in Sources */,
 				DE923C7F1BE95742002453AA /* ProfileViewController.swift in Sources */,
 				DE544E941BEAD53800C803DB /* ImageController.swift in Sources */,

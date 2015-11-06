@@ -110,7 +110,7 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="eg3-rZ-zL5">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="usersCell" id="eg3-rZ-zL5">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eg3-rZ-zL5" id="YZt-5M-59f">
@@ -120,7 +120,7 @@
                                 </tableViewCellContentView>
                                 <animations/>
                                 <connections>
-                                    <segue destination="7aW-ZM-Lzh" kind="show" id="vqZ-1N-K1p"/>
+                                    <segue destination="7aW-ZM-Lzh" kind="show" identifier="toProfileView" id="vqZ-1N-K1p"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -139,6 +139,9 @@
                                 <segment title="My Friends"/>
                                 <segment title="Add Friends"/>
                             </segments>
+                            <connections>
+                                <action selector="selectedIndexChanged:" destination="0cD-Wx-oEl" eventType="valueChanged" id="SuR-TZ-QxR"/>
+                            </connections>
                         </segmentedControl>
                     </navigationItem>
                     <connections>
@@ -147,7 +150,38 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eDE-jp-syT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1962" y="-332"/>
+            <point key="canvasLocation" x="-1933" y="-332"/>
+        </scene>
+        <!--User Search Results Table View Controller-->
+        <scene sceneID="EeD-3H-Cr6">
+            <objects>
+                <tableViewController storyboardIdentifier="searchResultController" id="zDr-Ex-fi6" customClass="UserSearchResultsTableViewController" customModule="Timelines" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="9pJ-IV-rdd">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="userNameCell" id="Isg-yk-CC9">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Isg-yk-CC9" id="587-mr-Jsi">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <animations/>
+                                </tableViewCellContentView>
+                                <animations/>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="zDr-Ex-fi6" id="5zD-Me-5d0"/>
+                            <outlet property="delegate" destination="zDr-Ex-fi6" id="ZuX-L4-OHl"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JVQ-sZ-gbw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1308" y="-332"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="dHk-W2-0z2">

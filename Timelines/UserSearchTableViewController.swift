@@ -8,18 +8,74 @@
 
 import UIKit
 
-class UserSearchTableViewController: UITableViewController {
+class UserSearchTableViewController: UITableViewController, UISearchResultsUpdating {
 
+    //MARK: Properties
+    
+    var userDataSource: [User] = []
+    
+    @IBOutlet weak var modeSegmentControl: UISegmentedControl!
+    
+    // Create Enum Viewmode
+    enum ViewMode: Int {
+        case Friends = 0
+        case All = 1
+        
+        //TODO: -Not understand why has to call function in Enum
+        func users(completion: (users: [User]?) -> Void) {
+            
+            switch self {
+                
+            case .Friends:
+                
+        //TODO: -Why it has to be changed to followers ? and why use the followByUser but not follow User
+                UserController.followByUser(UserController.shareController.currentUser, completion: { (followers) -> Void in
+                    completion(users: followers)
+                })
+            case .All:
+                UserController.fetchAllUsers({ (users) -> Void in
+                    completion(users: users)
+                })
+            }
+        }
+    }
+    
+    // Get computed Property mode
+    var mode: ViewMode {
+        get {
+            return ViewMode(rawValue: modeSegmentControl.selectedSegmentIndex)!
+        }
+    }
+    
+   
+    func updateViewBasedOnMode() {
+        
+        mode.users { (users) -> Void in
+            if let users = users {
+                self.userDataSource = users
+            } else {
+                self.userDataSource = []
+            }
+        }
+        self.tableView.reloadData()
+    }
+   
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        updateViewBasedOnMode()
+        setUpSearchController()
     }
+    
 
+    //MARK: Changing Value Segment Action
+    
+    @IBAction func selectedIndexChanged(sender: UISegmentedControl) {
+        
+        updateViewBasedOnMode()
+        
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -27,25 +83,52 @@ class UserSearchTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return userDataSource.count
     }
 
-    /*
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("usersCell", forIndexPath: indexPath)
 
-        // Configure the cell...
+        let users = userDataSource[indexPath.row]
+        
+        cell.textLabel?.text =  users.username
 
         return cell
     }
-    */
+    
+    //MARK: SearchController
+    
+    var searchController: UISearchController!
+    //Set up search Controller func
+    
+    func setUpSearchController() {
+        
+        //create var and assign to UIStoryboard(.....) then instantiateView Controller
+        let resultsController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("searchResultController")
+        
+        searchController = UISearchController(searchResultsController: resultsController)
+        searchController.searchResultsUpdater = self
+        searchController.searchBar.sizeToFit()
+        searchController.hidesNavigationBarDuringPresentation = false
+        tableView.tableHeaderView = searchController.searchBar
+        
+        definesPresentationContext = true
+    }
+    
+    
+    func updateSearchResultsForSearchController(searchController: UISearchController) {
+        let searchTerm = searchController.searchBar.text!.lowercaseString
+        let resultsController = searchController.searchResultsController as? UserSearchResultsTableViewController
+        
+        if let resultsController = resultsController {
+            resultsController.usersResultsDataSource = userDataSource.filter({$0.username.lowercaseString.containsString(searchTerm)})
+            resultsController.tableView.reloadData()
+            
+        }
+    }
 
     /*
     // Override to support conditional editing of the table view.
