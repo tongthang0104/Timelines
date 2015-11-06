@@ -24,15 +24,15 @@ class LoginSignUpViewController: UIViewController {
         case Login, Signup
     }
     
-    var mode: ViewMode = .Signup
+    var mode = ViewMode.Signup
     var fieldsAreValid: Bool {
         get {
             switch mode {
             case .Login:
-                return !(emailTextField.text!.isEmpty && passwordTextField.text!.isEmpty)
+                return !(emailTextField.text!.isEmpty || passwordTextField.text!.isEmpty)
                 
             case .Signup:
-                return !(emailTextField.text!.isEmpty && passwordTextField.text!.isEmpty && emailTextField.text!.isEmpty)
+                return !(emailTextField.text!.isEmpty || passwordTextField.text!.isEmpty || emailTextField.text!.isEmpty)
             }
         }
     }
@@ -66,6 +66,8 @@ class LoginSignUpViewController: UIViewController {
                     }
                 })
             }
+        } else {
+            presentValidationAlertWithTitle("Missing Information", message: "Please check your infomation and try again")
         }
     }
     
