@@ -12,19 +12,21 @@ class UserController {
     
     static let shareController = UserController()
     
-    var currentUser: User! = nil
+    
+    var currentUser: User! = UserController.mockUser().first
+    
     
     //Check user Identifier
-    static func userForIdentifier(identifier: String, completion: (user: User?) -> Void) {
+    static func userForIdentifier(identifier: String, completion: (users: User?) -> Void) {
         
-        completion(user: mockUser().first)
+        completion(users: mockUser().first)
         
     }
     
     //Getting and Reading all of the users
-    static func fetchAllUsers(completion: (user: [User]) -> Void) {
+    static func fetchAllUsers(completion: (users: [User]) -> Void) {
         
-        completion(user: mockUser())
+        completion(users: mockUser())
     }
     
     //Follow User or not?
@@ -32,14 +34,20 @@ class UserController {
         completion(success: true)
     }
     
+    //unfollow User
+    static func unfollowUser(user: User, completion: (success: Bool) -> Void) {
+        completion(success: true)
+    }
+    
+  
     //one user follow another
-    static func userFollowsUser (user: User, followUser: String , completion: (follow: Bool) -> Void) {
+    static func userFollowsUser (users: User, followUser: String , completion: (follow: Bool) -> Void) {
         completion(follow: true)
     }
     //Check if the others follow?
-    static func followByUser(user: User, completion: (follows: [User]?) -> Void) {
+    static func followByUser(users: User, completion: (followed: [User]?) -> Void) {
         
-        completion(follows: mockUser())
+        completion(followed: [mockUser()[1], mockUser()[0]])
     }
     
     //Authenticate user id and password?
