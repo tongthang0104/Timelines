@@ -90,8 +90,10 @@ class LoginSignUpViewController: UIViewController {
     //Login mode
     func updateWithLoginMode() {
         emailTextField.hidden = true
-//        bioTextField.hidden = true
+        bioTextField.hidden = true
         urlTextField.hidden = true
+        passwordTextField.hidden = false
+        usernameTextField.hidden = false
         actionButton.setTitle("Login", forState: .Normal)
     }
     
