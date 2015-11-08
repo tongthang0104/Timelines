@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		DE544E921BEACB5900C803DB /* PostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE544E911BEACB5900C803DB /* PostController.swift */; };
 		DE544E941BEAD53800C803DB /* ImageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE544E931BEAD53800C803DB /* ImageController.swift */; };
+		DE5CE9C41BEF2044006C3F53 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5CE9C31BEF2044006C3F53 /* ImageCollectionViewCell.swift */; };
+		DE8F3A7F1BEF0E0500A58C80 /* ProfileHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8F3A7E1BEF0E0500A58C80 /* ProfileHeaderCollectionReusableView.swift */; };
 		DE923C7D1BE95742002453AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE923C7C1BE95742002453AA /* AppDelegate.swift */; };
 		DE923C7F1BE95742002453AA /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE923C7E1BE95742002453AA /* ProfileViewController.swift */; };
 		DE923C821BE95742002453AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE923C801BE95742002453AA /* Main.storyboard */; };
@@ -50,6 +52,8 @@
 /* Begin PBXFileReference section */
 		DE544E911BEACB5900C803DB /* PostController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostController.swift; sourceTree = "<group>"; };
 		DE544E931BEAD53800C803DB /* ImageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageController.swift; sourceTree = "<group>"; };
+		DE5CE9C31BEF2044006C3F53 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		DE8F3A7E1BEF0E0500A58C80 /* ProfileHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
 		DE923C791BE95742002453AA /* Timelines.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Timelines.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE923C7C1BE95742002453AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DE923C7E1BE95742002453AA /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -162,6 +166,8 @@
 				DE923CAC1BE96492002453AA /* PostDetailTableViewController.swift */,
 				DE923CAA1BE96432002453AA /* TimelineTableViewController.swift */,
 				DE923C7E1BE95742002453AA /* ProfileViewController.swift */,
+				DE8F3A7E1BEF0E0500A58C80 /* ProfileHeaderCollectionReusableView.swift */,
+				DE5CE9C31BEF2044006C3F53 /* ImageCollectionViewCell.swift */,
 				DE923C7C1BE95742002453AA /* AppDelegate.swift */,
 			);
 			name = Controller;
@@ -328,8 +334,10 @@
 				DECCA7F51BEC81160000D39A /* UserSearchResultsTableViewController.swift in Sources */,
 				DE923CAF1BE964CD002453AA /* UserSearchTableViewController.swift in Sources */,
 				DE923C7F1BE95742002453AA /* ProfileViewController.swift in Sources */,
+				DE5CE9C41BEF2044006C3F53 /* ImageCollectionViewCell.swift in Sources */,
 				DE544E941BEAD53800C803DB /* ImageController.swift in Sources */,
 				DE923CC21BE97E21002453AA /* UserController.swift in Sources */,
+				DE8F3A7F1BEF0E0500A58C80 /* ProfileHeaderCollectionReusableView.swift in Sources */,
 				DE923CBA1BE96E0B002453AA /* User.swift in Sources */,
 				DE923CC01BE978D8002453AA /* Like.swift in Sources */,
 				DE923CAB1BE96432002453AA /* TimelineTableViewController.swift in Sources */,
