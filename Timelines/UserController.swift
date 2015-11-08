@@ -41,7 +41,7 @@ class UserController {
     
   
     //one user follow another
-    static func userFollowsUser (users: User, followUser: String , completion: (follow: Bool) -> Void) {
+    static func userFollowsUser (users: User, followUser: User, completion: (follow: Bool) -> Void) {
         completion(follow: true)
     }
     //Check if the others follow?
