@@ -194,8 +194,121 @@
                     <view key="view" contentMode="scaleToFill" id="WGj-BB-dHC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="t7F-6T-dTL">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <animations/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="31p-IN-wFV">
+                                    <size key="itemSize" width="110" height="113"/>
+                                    <size key="headerReferenceSize" width="50" height="101"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="imageCollectionCell" id="uIf-20-tVb" customClass="ImageCollectionViewCell" customModule="Timelines" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="165" width="110" height="113"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="110" height="113"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UbA-vW-EGG">
+                                                    <rect key="frame" x="0.0" y="0.0" width="110" height="113"/>
+                                                    <animations/>
+                                                </imageView>
+                                            </subviews>
+                                            <animations/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstItem="UbA-vW-EGG" firstAttribute="top" secondItem="uIf-20-tVb" secondAttribute="top" id="2H9-sX-Pq3"/>
+                                            <constraint firstAttribute="bottom" secondItem="UbA-vW-EGG" secondAttribute="bottom" id="2mr-Xt-iqK"/>
+                                            <constraint firstAttribute="trailing" secondItem="UbA-vW-EGG" secondAttribute="trailing" id="cIa-dA-RsI"/>
+                                            <constraint firstItem="UbA-vW-EGG" firstAttribute="leading" secondItem="uIf-20-tVb" secondAttribute="leading" id="xYJ-Bi-jIL"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="imageView" destination="UbA-vW-EGG" id="a4f-9f-MvA"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="profileHeaderCell" id="bu9-Yi-XSk" customClass="ProfileHeaderCollectionReusableView" customModule="Timelines" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="64" width="600" height="101"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="6ps-u4-nX5">
+                                            <rect key="frame" x="154" y="0.0" width="292" height="101"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bsq-OC-8IH">
+                                                    <rect key="frame" x="0.0" y="0.0" width="292" height="25"/>
+                                                    <animations/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="25" id="yu7-jD-apg"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ueE-Fa-ZZf">
+                                                    <rect key="frame" x="0.0" y="34" width="292" height="29"/>
+                                                    <animations/>
+                                                    <state key="normal" title="Homepage"/>
+                                                    <connections>
+                                                        <action selector="urlButtonTapped:" destination="bu9-Yi-XSk" eventType="touchUpInside" id="HPu-Vp-pPt"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q9c-wH-uRu">
+                                                    <rect key="frame" x="0.0" y="72" width="292" height="29"/>
+                                                    <animations/>
+                                                    <state key="normal" title="Follow User"/>
+                                                    <connections>
+                                                        <action selector="followUserButtonTapped:" destination="bu9-Yi-XSk" eventType="touchUpInside" id="r8G-R9-3hD"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <animations/>
+                                            <constraints>
+                                                <constraint firstItem="ueE-Fa-ZZf" firstAttribute="height" secondItem="q9c-wH-uRu" secondAttribute="height" id="J8i-UO-8yb"/>
+                                                <constraint firstItem="q9c-wH-uRu" firstAttribute="top" secondItem="ueE-Fa-ZZf" secondAttribute="bottom" id="YQd-QC-9K3"/>
+                                                <constraint firstItem="ueE-Fa-ZZf" firstAttribute="top" secondItem="Bsq-OC-8IH" secondAttribute="bottom" id="hGz-WD-Cix"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="hGz-WD-Cix"/>
+                                                    <exclude reference="YQd-QC-9K3"/>
+                                                </mask>
+                                            </variation>
+                                        </stackView>
+                                    </subviews>
+                                    <animations/>
+                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstItem="6ps-u4-nX5" firstAttribute="top" secondItem="bu9-Yi-XSk" secondAttribute="topMargin" constant="-8" id="WuP-qJ-6ck"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="6ps-u4-nX5" secondAttribute="bottom" constant="-8" id="sbe-fy-mbD"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="6ps-u4-nX5" secondAttribute="trailing" constant="146" id="vMv-T1-JPd"/>
+                                        <constraint firstItem="6ps-u4-nX5" firstAttribute="leading" secondItem="bu9-Yi-XSk" secondAttribute="leadingMargin" constant="146" id="xRJ-5S-GDG"/>
+                                    </constraints>
+                                    <connections>
+                                        <outlet property="bioLabel" destination="Bsq-OC-8IH" id="ZKh-ov-Dme"/>
+                                        <outlet property="followUserButton" destination="q9c-wH-uRu" id="foY-Du-2Ms"/>
+                                        <outlet property="urlButton" destination="ueE-Fa-ZZf" id="fkP-Aw-L4G"/>
+                                    </connections>
+                                </collectionReusableView>
+                                <connections>
+                                    <outlet property="dataSource" destination="7aW-ZM-Lzh" id="fVF-hE-ku7"/>
+                                    <outlet property="delegate" destination="7aW-ZM-Lzh" id="eu4-ZL-4H4"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="t7F-6T-dTL" secondAttribute="trailing" id="FsX-1W-u09"/>
+                            <constraint firstItem="t7F-6T-dTL" firstAttribute="leading" secondItem="WGj-BB-dHC" secondAttribute="leading" id="I0y-AY-8kx"/>
+                            <constraint firstItem="t7F-6T-dTL" firstAttribute="top" secondItem="WGj-BB-dHC" secondAttribute="top" id="hlb-4H-hoM"/>
+                            <constraint firstAttribute="bottom" secondItem="t7F-6T-dTL" secondAttribute="bottom" id="uP3-yQ-D7x"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="kfb-Zz-PWa"/>
                 </viewController>
