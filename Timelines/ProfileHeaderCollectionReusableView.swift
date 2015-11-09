@@ -8,6 +8,13 @@
 
 import UIKit
 
+//TODO: Ask why I have to create a protocol
+protocol ProfileHeaderCollectionReusableViewDelegate {
+    
+    func userTappedFollowActionButton(sender: UIButton)
+    func userTappedURLActionButton(sender: UIButton)
+}
+
 class ProfileHeaderCollectionReusableView: UICollectionReusableView {
     
     
@@ -76,12 +83,7 @@ class ProfileHeaderCollectionReusableView: UICollectionReusableView {
     
 }
 
-//TODO: Ask why I have to create a protocol
-protocol ProfileHeaderCollectionReusableViewDelegate {
-    
-    func userTappedFollowActionButton(sender: UIButton)
-    func userTappedURLActionButton(sender: UIButton)
-}
+
 
 
 
