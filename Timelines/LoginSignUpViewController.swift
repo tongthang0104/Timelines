@@ -10,6 +10,12 @@ import UIKit
 
 class LoginSignUpViewController: UIViewController {
     
+    //MARK: Enum Login, Signup
+    
+    enum ViewMode {
+        case Login, Signup, Edit
+    }
+    
     //MARK: Properties
     
     @IBOutlet weak var usernameTextField: UITextField!
@@ -19,20 +25,19 @@ class LoginSignUpViewController: UIViewController {
     @IBOutlet weak var urlTextField: UITextField!
     @IBOutlet weak var actionButton: UIButton!
     
-    //Enum Login, Signup
-    enum ViewMode {
-        case Login, Signup
-    }
-    
+    var user: User?
     var mode = ViewMode.Signup
     var fieldsAreValid: Bool {
         get {
             switch mode {
             case .Login:
-                return !(emailTextField.text!.isEmpty || passwordTextField.text!.isEmpty)
+                return !(usernameTextField.text!.isEmpty || passwordTextField.text!.isEmpty)
                 
             case .Signup:
-                return !(emailTextField.text!.isEmpty || passwordTextField.text!.isEmpty || emailTextField.text!.isEmpty)
+                return !(usernameTextField.text!.isEmpty || passwordTextField.text!.isEmpty || emailTextField.text!.isEmpty)
+                
+            case .Edit:
+                return !(usernameTextField.text!.isEmpty)
             }
         }
     }
@@ -65,6 +70,17 @@ class LoginSignUpViewController: UIViewController {
                         self.presentValidationAlertWithTitle("Unable to Signup", message: "Please check your information and try again")
                     }
                 })
+            case .Edit:
+                
+                if let user = user {
+                    UserController.updateUser(user, username: usernameTextField.text!, bio: bioTextField.text, url: urlTextField.text, completetion: { (success, user) -> Void in
+                        if success {
+                            self.dismissViewControllerAnimated(true, completion: nil)
+                        }else {
+                            self.presentValidationAlertWithTitle("Unable to update User", message: "Please check your infomation and try again")
+                        }
+                    })
+                }
             }
         } else {
             presentValidationAlertWithTitle("Missing Information", message: "Please check your infomation and try again")
@@ -84,8 +100,10 @@ class LoginSignUpViewController: UIViewController {
         switch mode {
         case .Login:
             return updateWithLoginMode()
-        default:
+        case .Signup:
             return updateWithSignUpMode()
+        case .Edit:
+            return updateWithEditMode()
         }
     }
     
@@ -104,9 +122,25 @@ class LoginSignUpViewController: UIViewController {
         actionButton.setTitle("SignUp", forState: .Normal)
     }
     
+    //Edit mode
+    func updateWithEditMode() {
+        emailTextField.hidden = true
+        passwordTextField.hidden = true
+        actionButton.setTitle("Update", forState: .Normal)
+        
+        //show on the TextField information of User(already had)
+        if let user = self.user {
+            usernameTextField.text = user.username
+            bioTextField.text = user.bio
+            urlTextField.text = user.url
+        }
+    }
     
-    
-    
+    func updateWithUser(user: User) {
+        self.user = user
+        mode = .Edit
+    }
+ 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
