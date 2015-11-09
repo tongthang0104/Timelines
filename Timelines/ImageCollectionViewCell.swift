@@ -12,6 +12,7 @@ class ImageCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var imageView: UIImageView!
     
+    //func updateWithImageIdentifier
     func updateWithImageIdentifier(identifier: String) {
         
         self.imageView.image = nil

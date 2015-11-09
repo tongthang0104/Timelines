@@ -61,7 +61,7 @@ class UserController {
     }
     
     //Update User
-    static func updateUser(user: String, username: String, bio: String?, url: String?, completetion: (success: Bool, user: User?) -> Void) {
+    static func updateUser(user: User, username: String, bio: String?, url: String?, completetion: (success: Bool, user: User?) -> Void) {
         
         completetion (success: true, user: mockUser().first)
     }
