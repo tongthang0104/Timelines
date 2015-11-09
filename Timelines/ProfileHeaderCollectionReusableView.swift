@@ -26,6 +26,14 @@ class ProfileHeaderCollectionReusableView: UICollectionReusableView {
         self.delegate?.userTappedFollowActionButton(sender)
     }
     
+    func logout(user: User) {
+    
+        if user == UserController.shareController.currentUser {
+            followUserButton.setTitle("Logout", forState: .Normal)
+            
+        }
+    }
+    
     func updateWithUser(user: User) {
         
         if let bio = user.bio {
@@ -60,6 +68,12 @@ class ProfileHeaderCollectionReusableView: UICollectionReusableView {
             })
         }
     }
+    
+    
+    
+    
+    
+    
 }
 
 //TODO: Ask why I have to create a protocol
@@ -68,3 +82,16 @@ protocol ProfileHeaderCollectionReusableViewDelegate {
     func userTappedFollowActionButton(sender: UIButton)
     func userTappedURLActionButton(sender: UIButton)
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
