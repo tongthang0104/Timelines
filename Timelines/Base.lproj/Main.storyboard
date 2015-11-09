@@ -67,7 +67,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eLo-nl-Hx9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1962" y="-1028"/>
+            <point key="canvasLocation" x="-1978" y="-1036"/>
         </scene>
         <!--Post Detail Table View Controller-->
         <scene sceneID="RN1-IV-go9">
@@ -98,7 +98,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ach-4j-T3x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1308" y="-1028"/>
+            <point key="canvasLocation" x="-1316" y="-1028"/>
         </scene>
         <!--User Search Table View Controller-->
         <scene sceneID="Wtm-Pi-zu1">
@@ -230,6 +230,7 @@
                                         </constraints>
                                         <connections>
                                             <outlet property="imageView" destination="UbA-vW-EGG" id="a4f-9f-MvA"/>
+                                            <segue destination="a6E-Pw-48w" kind="show" id="YCB-Mj-5xD"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -237,30 +238,32 @@
                                     <rect key="frame" x="0.0" y="64" width="600" height="101"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="6ps-u4-nX5">
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="6ps-u4-nX5">
                                             <rect key="frame" x="154" y="0.0" width="292" height="101"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bsq-OC-8IH">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bsq-OC-8IH">
                                                     <rect key="frame" x="0.0" y="0.0" width="292" height="25"/>
                                                     <animations/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="25" id="yu7-jD-apg"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ueE-Fa-ZZf">
-                                                    <rect key="frame" x="0.0" y="34" width="292" height="29"/>
+                                                    <rect key="frame" x="0.0" y="32" width="292" height="31"/>
                                                     <animations/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <state key="normal" title="Homepage"/>
                                                     <connections>
                                                         <action selector="urlButtonTapped:" destination="bu9-Yi-XSk" eventType="touchUpInside" id="HPu-Vp-pPt"/>
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q9c-wH-uRu">
-                                                    <rect key="frame" x="0.0" y="72" width="292" height="29"/>
+                                                    <rect key="frame" x="0.0" y="70" width="292" height="31"/>
                                                     <animations/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <state key="normal" title="Follow User"/>
                                                     <connections>
                                                         <action selector="followUserButtonTapped:" destination="bu9-Yi-XSk" eventType="touchUpInside" id="r8G-R9-3hD"/>
@@ -310,11 +313,21 @@
                             <constraint firstAttribute="bottom" secondItem="t7F-6T-dTL" secondAttribute="bottom" id="uP3-yQ-D7x"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="kfb-Zz-PWa"/>
+                    <navigationItem key="navigationItem" id="kfb-Zz-PWa">
+                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="JLh-aE-Oou">
+                            <connections>
+                                <segue destination="4fI-OO-FG9" kind="show" identifier="toEditProfile" id="eFn-bi-dPe"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="collectionView" destination="t7F-6T-dTL" id="yJH-4R-mB9"/>
+                        <outlet property="editBarButton" destination="JLh-aE-Oou" id="T6h-vF-yox"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RGS-UW-mPf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1962" y="387"/>
+            <point key="canvasLocation" x="-1954" y="399"/>
         </scene>
         <!--Add Photo Table View Controller-->
         <scene sceneID="8Ks-0V-A7M">
@@ -689,7 +702,8 @@
         <image name="meeting" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="gHG-HE-pe6"/>
         <segue reference="vqZ-1N-K1p"/>
+        <segue reference="YCB-Mj-5xD"/>
+        <segue reference="eFn-bi-dPe"/>
     </inferredMetricsTieBreakers>
 </document>
