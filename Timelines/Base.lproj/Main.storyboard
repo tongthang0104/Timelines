@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="d6q-cL-eQd">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="a6E-Pw-48w">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
@@ -118,7 +118,7 @@
             </objects>
             <point key="canvasLocation" x="-1978" y="-1036"/>
         </scene>
-        <!--Post Detail Table View Controller-->
+        <!--Title-->
         <scene sceneID="RN1-IV-go9">
             <objects>
                 <tableViewController id="a6E-Pw-48w" customClass="PostDetailTableViewController" customModule="Timelines" customModuleProvider="target" sceneMemberID="viewController">
@@ -131,19 +131,13 @@
                             <rect key="frame" x="0.0" y="64" width="600" height="198"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Aim-gY-zvt">
-                                    <rect key="frame" x="0.0" y="8" width="600" height="182"/>
-                                    <animations/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="182" id="f94-Ax-RE4"/>
-                                    </constraints>
-                                </imageView>
                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="400" translatesAutoresizingMaskIntoConstraints="NO" id="cOe-Zb-zr4">
                                     <rect key="frame" x="0.0" y="152" width="600" height="38"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F8u-8Y-3ny">
                                             <rect key="frame" x="0.0" y="0.0" width="100" height="38"/>
                                             <animations/>
+                                            <color key="backgroundColor" red="0.72748844720000005" green="0.2333829244" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -151,6 +145,7 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p9P-1c-13R">
                                             <rect key="frame" x="500" y="0.0" width="100" height="38"/>
                                             <animations/>
+                                            <color key="backgroundColor" red="0.72748844720000005" green="0.2333829244" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -161,6 +156,13 @@
                                         <constraint firstItem="p9P-1c-13R" firstAttribute="width" secondItem="F8u-8Y-3ny" secondAttribute="width" id="0vb-7z-ZLJ"/>
                                     </constraints>
                                 </stackView>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Hamburger" translatesAutoresizingMaskIntoConstraints="NO" id="Aim-gY-zvt">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="190"/>
+                                    <animations/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="190" id="f94-Ax-RE4"/>
+                                    </constraints>
+                                </imageView>
                             </subviews>
                             <animations/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -169,7 +171,7 @@
                                 <constraint firstItem="cOe-Zb-zr4" firstAttribute="leading" secondItem="uts-Wh-G1Y" secondAttribute="leading" id="B21-SE-zpg"/>
                                 <constraint firstAttribute="trailing" secondItem="cOe-Zb-zr4" secondAttribute="trailing" id="DB7-cv-sIi"/>
                                 <constraint firstItem="cOe-Zb-zr4" firstAttribute="top" secondItem="uts-Wh-G1Y" secondAttribute="top" constant="152" id="JYa-bx-0H1"/>
-                                <constraint firstItem="Aim-gY-zvt" firstAttribute="top" secondItem="uts-Wh-G1Y" secondAttribute="top" constant="8" id="KnN-cn-GD7"/>
+                                <constraint firstItem="Aim-gY-zvt" firstAttribute="top" secondItem="uts-Wh-G1Y" secondAttribute="top" id="KnN-cn-GD7"/>
                                 <constraint firstItem="Aim-gY-zvt" firstAttribute="centerX" secondItem="uts-Wh-G1Y" secondAttribute="centerX" id="PPd-n6-LFZ"/>
                                 <constraint firstAttribute="trailing" secondItem="Aim-gY-zvt" secondAttribute="trailing" id="cly-Ez-EU9"/>
                                 <constraint firstAttribute="bottom" secondItem="Aim-gY-zvt" secondAttribute="bottom" constant="8" id="dfd-BJ-fq5"/>
@@ -181,7 +183,10 @@
                             <rect key="frame" x="0.0" y="334" width="600" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <animations/>
-                            <state key="normal" title="Button"/>
+                            <state key="normal" title="Add Comment"/>
+                            <connections>
+                                <action selector="addCommentTapped:" destination="a6E-Pw-48w" eventType="touchUpInside" id="LrW-2U-3Ue"/>
+                            </connections>
                         </button>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="fMk-aJ-dnY" detailTextLabel="rYm-KW-ahn" style="IBUITableViewCellStyleSubtitle" id="Vht-e6-SI5">
@@ -218,6 +223,18 @@
                             <outlet property="delegate" destination="a6E-Pw-48w" id="phU-NZ-wZs"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Title" id="i1D-35-5Nc">
+                        <barButtonItem key="rightBarButtonItem" title="Like" id="LC0-87-i0z">
+                            <connections>
+                                <action selector="likeButtonTapped:" destination="a6E-Pw-48w" id="zQP-iE-l11"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="commentLabel" destination="F8u-8Y-3ny" id="P0j-0v-BYG"/>
+                        <outlet property="headerImageView" destination="Aim-gY-zvt" id="72r-dm-E1m"/>
+                        <outlet property="likeLabel" destination="p9P-1c-13R" id="tgQ-RY-WVa"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ach-4j-T3x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -820,6 +837,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Hamburger" width="302" height="300"/>
         <image name="checked_user" width="25" height="25"/>
         <image name="instagram" width="25" height="25"/>
         <image name="meeting" width="25" height="25"/>
