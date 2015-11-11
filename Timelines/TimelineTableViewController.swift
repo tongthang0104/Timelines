@@ -10,7 +10,9 @@ import UIKit
 
 class TimelineTableViewController: UITableViewController {
 
+    //MARK: Properties
     
+    var posts: Post?
     var post: [Post] = []
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,12 +36,35 @@ class TimelineTableViewController: UITableViewController {
         }
     }
     
+    //MARK: Pull To Refresh
+    func pullToRefresh(user: User) {
+        PostController.fetchTimeLineForUser(user) { (post) -> Void in
+            if let post = post {
+                self.post = post
+                dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                    self.tableView.reloadData()
+                    self.refreshControl?.endRefreshing()
+                })
+            }else {
+                self.refreshControl?.endRefreshing()
+            }
+        }
+        
+    }
+    
+    @IBAction func userRefreshedTable(sender: UIRefreshControl) {
+        pullToRefresh(UserController.shareController.currentUser)
+    }
+    
+    
+    
     func loadTimeLineForUser(user: User) {
         PostController.fetchTimeLineForUser(user) { (post) -> Void in
             if let post = post {
                 self.post = post
             }
         }
+        tableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -48,26 +73,22 @@ class TimelineTableViewController: UITableViewController {
     }
 
     // MARK: - Table view data source
-
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
+    
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return post.count
     }
 
-    /*
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
-
-        // Configure the cell...
-
+        let cell = tableView.dequeueReusableCellWithIdentifier("postsCell", forIndexPath: indexPath) as! PostTableViewCell
+        let posts = post[indexPath.row]
+        cell.updateWithPost(posts)
         return cell
     }
-    */
+    
+    
+    
 
     /*
     // Override to support conditional editing of the table view.
