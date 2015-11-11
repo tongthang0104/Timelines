@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DE45FB691BF0514500E1FB0B /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE45FB681BF0514500E1FB0B /* PostTableViewCell.swift */; };
 		DE544E921BEACB5900C803DB /* PostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE544E911BEACB5900C803DB /* PostController.swift */; };
 		DE544E941BEAD53800C803DB /* ImageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE544E931BEAD53800C803DB /* ImageController.swift */; };
 		DE5CE9C41BEF2044006C3F53 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5CE9C31BEF2044006C3F53 /* ImageCollectionViewCell.swift */; };
@@ -50,6 +51,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DE45FB681BF0514500E1FB0B /* PostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		DE544E911BEACB5900C803DB /* PostController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostController.swift; sourceTree = "<group>"; };
 		DE544E931BEAD53800C803DB /* ImageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageController.swift; sourceTree = "<group>"; };
 		DE5CE9C31BEF2044006C3F53 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -106,6 +108,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DE45FB6A1BF0516000E1FB0B /* TimeLine View */ = {
+			isa = PBXGroup;
+			children = (
+				DE923CAA1BE96432002453AA /* TimelineTableViewController.swift */,
+				DE45FB681BF0514500E1FB0B /* PostTableViewCell.swift */,
+				DE923CAC1BE96492002453AA /* PostDetailTableViewController.swift */,
+				DE923CB01BE969F6002453AA /* AddPhotoTableViewController.swift */,
+			);
+			name = "TimeLine View";
+			sourceTree = "<group>";
+		};
+		DE45FB6B1BF0517700E1FB0B /* Friends View */ = {
+			isa = PBXGroup;
+			children = (
+				DE923CAE1BE964CD002453AA /* UserSearchTableViewController.swift */,
+				DECCA7F41BEC81160000D39A /* UserSearchResultsTableViewController.swift */,
+			);
+			name = "Friends View";
+			sourceTree = "<group>";
+		};
+		DE45FB6C1BF0518B00E1FB0B /* Profile View */ = {
+			isa = PBXGroup;
+			children = (
+				DE5CE9C31BEF2044006C3F53 /* ImageCollectionViewCell.swift */,
+				DE8F3A7E1BEF0E0500A58C80 /* ProfileHeaderCollectionReusableView.swift */,
+				DE923C7E1BE95742002453AA /* ProfileViewController.swift */,
+			);
+			name = "Profile View";
+			sourceTree = "<group>";
+		};
+		DE45FB6D1BF051AE00E1FB0B /* Login/SignUp View */ = {
+			isa = PBXGroup;
+			children = (
+				DE923CB41BE96D2B002453AA /* LoginSignUpViewController.swift */,
+				DE923CB21BE96C39002453AA /* LogInSignUpPickerViewController.swift */,
+			);
+			name = "Login/SignUp View";
+			sourceTree = "<group>";
+		};
 		DE923C701BE95742002453AA = {
 			isa = PBXGroup;
 			children = (
@@ -158,16 +199,10 @@
 		DE923CB61BE96D78002453AA /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				DE923CB41BE96D2B002453AA /* LoginSignUpViewController.swift */,
-				DE923CB21BE96C39002453AA /* LogInSignUpPickerViewController.swift */,
-				DE923CB01BE969F6002453AA /* AddPhotoTableViewController.swift */,
-				DE923CAE1BE964CD002453AA /* UserSearchTableViewController.swift */,
-				DECCA7F41BEC81160000D39A /* UserSearchResultsTableViewController.swift */,
-				DE923CAC1BE96492002453AA /* PostDetailTableViewController.swift */,
-				DE923CAA1BE96432002453AA /* TimelineTableViewController.swift */,
-				DE923C7E1BE95742002453AA /* ProfileViewController.swift */,
-				DE8F3A7E1BEF0E0500A58C80 /* ProfileHeaderCollectionReusableView.swift */,
-				DE5CE9C31BEF2044006C3F53 /* ImageCollectionViewCell.swift */,
+				DE45FB6D1BF051AE00E1FB0B /* Login/SignUp View */,
+				DE45FB6A1BF0516000E1FB0B /* TimeLine View */,
+				DE45FB6B1BF0517700E1FB0B /* Friends View */,
+				DE45FB6C1BF0518B00E1FB0B /* Profile View */,
 				DE923C7C1BE95742002453AA /* AppDelegate.swift */,
 			);
 			name = Controller;
@@ -177,11 +212,11 @@
 			isa = PBXGroup;
 			children = (
 				DE923CBB1BE97573002453AA /* Post.swift */,
-				DE923CBD1BE977E5002453AA /* Comment.swift */,
 				DE923CBF1BE978D8002453AA /* Like.swift */,
+				DE923CBD1BE977E5002453AA /* Comment.swift */,
 				DE923CB91BE96E0B002453AA /* User.swift */,
-				DE923CC11BE97E21002453AA /* UserController.swift */,
 				DE544E911BEACB5900C803DB /* PostController.swift */,
+				DE923CC11BE97E21002453AA /* UserController.swift */,
 				DE544E931BEAD53800C803DB /* ImageController.swift */,
 				DE923C831BE95742002453AA /* Assets.xcassets */,
 			);
@@ -333,6 +368,7 @@
 				DE923CB31BE96C39002453AA /* LogInSignUpPickerViewController.swift in Sources */,
 				DECCA7F51BEC81160000D39A /* UserSearchResultsTableViewController.swift in Sources */,
 				DE923CAF1BE964CD002453AA /* UserSearchTableViewController.swift in Sources */,
+				DE45FB691BF0514500E1FB0B /* PostTableViewCell.swift in Sources */,
 				DE923C7F1BE95742002453AA /* ProfileViewController.swift in Sources */,
 				DE5CE9C41BEF2044006C3F53 /* ImageCollectionViewCell.swift in Sources */,
 				DE544E941BEAD53800C803DB /* ImageController.swift in Sources */,
