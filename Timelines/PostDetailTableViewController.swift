@@ -10,21 +10,50 @@ import UIKit
 
 class PostDetailTableViewController: UITableViewController {
 
+    //MARK: Properties
+    
+    var post: Post?
+    
+    @IBOutlet weak var headerImageView: UIImageView!
+    @IBOutlet weak var commentLabel: UILabel!
+    @IBOutlet weak var likeLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        updateBaseOnPost()
     }
+    
+    //MARK: Action
 
+    @IBAction func addCommentTapped(sender: UIButton) {
+        let alert = UIAlertController(title: "Add Comments", message: "Add your comment here", preferredStyle: .ActionSheet)
+        
+        alert.addAction(UIAlertAction(title: "Add Comment", style: .Default, handler: { (alert) -> Void in
+            print("Thang")
+        }))
+    }
+    @IBAction func likeButtonTapped(sender: UIBarButtonItem) {
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 
+    
+    func updateBaseOnPost() {
+        
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
