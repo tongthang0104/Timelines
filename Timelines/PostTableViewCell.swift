@@ -31,13 +31,6 @@ class PostTableViewCell: UITableViewCell {
         }
         
     }
-    
-    
-    
-    
-
-    
-    
 
     override func awakeFromNib() {
         super.awakeFromNib()
