@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="a6E-Pw-48w">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="a6E-Pw-48w">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -90,7 +90,7 @@
                                     <outlet property="commentsLabel" destination="CCi-fo-hmD" id="bfB-wy-oUz"/>
                                     <outlet property="likesLabel" destination="PwF-Gz-LMX" id="QdK-3c-0KS"/>
                                     <outlet property="postImageView" destination="XcT-xO-y75" id="ctM-ii-md2"/>
-                                    <segue destination="a6E-Pw-48w" kind="show" id="eJP-E2-ylW"/>
+                                    <segue destination="a6E-Pw-48w" kind="show" identifier="showPostDetail" id="eJP-E2-ylW"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -189,7 +189,7 @@
                             </connections>
                         </button>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="fMk-aJ-dnY" detailTextLabel="rYm-KW-ahn" style="IBUITableViewCellStyleSubtitle" id="Vht-e6-SI5">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="commentCell" textLabel="fMk-aJ-dnY" detailTextLabel="rYm-KW-ahn" style="IBUITableViewCellStyleSubtitle" id="Vht-e6-SI5">
                                 <rect key="frame" x="0.0" y="290" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Vht-e6-SI5" id="9bc-43-RkE">
@@ -238,7 +238,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ach-4j-T3x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1316" y="-1028"/>
+            <point key="canvasLocation" x="-1224" y="-1055"/>
         </scene>
         <!--User Search Table View Controller-->
         <scene sceneID="Wtm-Pi-zu1">
