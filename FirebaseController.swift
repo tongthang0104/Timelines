@@ -7,3 +7,6 @@
 //
 
 import Foundation
+
+let base = "https://mytimeline.firebaseio.com/"
+let firebase = 
