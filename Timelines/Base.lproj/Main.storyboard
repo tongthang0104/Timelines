@@ -478,38 +478,68 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Nhd-BH-c6k">
+                            <rect key="frame" x="0.0" y="336" width="600" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <animations/>
+                            <state key="normal" title="Submit"/>
+                            <connections>
+                                <action selector="submitButtonTapped:" destination="pV1-36-KfN" eventType="touchUpInside" id="opp-GK-lal"/>
+                            </connections>
+                        </button>
                         <sections>
                             <tableViewSection id="fAp-Oo-aTY">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="g9V-Kw-qMw">
-                                        <rect key="frame" x="0.0" y="64" width="600" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="g9V-Kw-qMw" id="3Ho-6O-0TN">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <animations/>
-                                        </tableViewCellContentView>
-                                        <animations/>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="8Cx-Jg-2fy">
-                                        <rect key="frame" x="0.0" y="108" width="600" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="228" id="8Cx-Jg-2fy">
+                                        <rect key="frame" x="0.0" y="64" width="600" height="228"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8Cx-Jg-2fy" id="md7-7B-ksG">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="227.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GT1-Z5-GK4">
+                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="227.5"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="83"/>
+                                                    <state key="normal" title="Add Photos"/>
+                                                    <connections>
+                                                        <action selector="addPhotosButtonTapped:" destination="pV1-36-KfN" eventType="touchUpInside" id="XMD-4y-EN1"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
                                             <animations/>
                                         </tableViewCellContentView>
                                         <animations/>
+                                        <constraints>
+                                            <constraint firstItem="GT1-Z5-GK4" firstAttribute="leading" secondItem="8Cx-Jg-2fy" secondAttribute="leading" id="CDo-2J-WYr"/>
+                                            <constraint firstAttribute="trailing" secondItem="GT1-Z5-GK4" secondAttribute="trailing" id="OLo-En-old"/>
+                                            <constraint firstAttribute="bottom" secondItem="GT1-Z5-GK4" secondAttribute="bottom" constant="0.5" id="caH-EY-rzb"/>
+                                            <constraint firstItem="GT1-Z5-GK4" firstAttribute="top" secondItem="8Cx-Jg-2fy" secondAttribute="top" id="tDC-gb-K1m"/>
+                                        </constraints>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="xuK-rz-iBY">
-                                        <rect key="frame" x="0.0" y="152" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="292" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xuK-rz-iBY" id="dhZ-ih-PKm">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add Caption..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vbp-UU-eoM">
+                                                    <rect key="frame" x="8" y="7" width="584" height="30"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
                                             <animations/>
                                         </tableViewCellContentView>
                                         <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="Vbp-UU-eoM" secondAttribute="trailing" constant="8" id="0p8-kL-3jI"/>
+                                            <constraint firstItem="Vbp-UU-eoM" firstAttribute="leading" secondItem="xuK-rz-iBY" secondAttribute="leading" constant="8" id="OYR-Kc-KKy"/>
+                                            <constraint firstItem="Vbp-UU-eoM" firstAttribute="top" secondItem="xuK-rz-iBY" secondAttribute="top" constant="7" id="cZj-OL-fxY"/>
+                                            <constraint firstAttribute="bottom" secondItem="Vbp-UU-eoM" secondAttribute="bottom" constant="7" id="rBO-bd-08w"/>
+                                        </constraints>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -519,7 +549,17 @@
                             <outlet property="delegate" destination="pV1-36-KfN" id="sjK-Tc-ovS"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="wlT-uo-JCX"/>
+                    <navigationItem key="navigationItem" id="wlT-uo-JCX">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="OTR-a7-4Fa">
+                            <connections>
+                                <action selector="cancelButtonTapped:" destination="pV1-36-KfN" id="w4f-07-Ib0"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="addCaptionTextField" destination="Vbp-UU-eoM" id="fyA-Xt-Dhp"/>
+                        <outlet property="addPhotosButton" destination="GT1-Z5-GK4" id="SD2-bW-QjN"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qZu-1w-smj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
